@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+    
+    <style type="text/css">
+        
+        #case {
+           color: rgb(19, 18, 18);
+           background-color: #edeeee;
+           display: block;
+           color: rgb(0, 0, 0);
+           text-align: center;
+           padding: 20px 25px;
+           text-decoration: none;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+           font-weight: 600;
+                    
+         }
+         .newpagebutton {position: absolute;
+  
+    
+}
+
+.newpagebuttona{
+   width: 120px;
+    height: 30px;           
+    border: #ddd;
+    background-color: rgb(182, 114, 59);
+    border-radius: 5px;
+    float: left;
+    overflow: hidden;
+    margin-left: 1050px;
+    margin-top: -20px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;}
+
+
+    .newpagebuttonx {position: absolute;
+  
+
+        
+    }
+    .newpagebuttony{width: 120px;
+    height: 30px;           
+    border: #ddd;
+    background-color: rgb(182, 114, 59);
+    border-radius: 5px;
+    float: left;
+    overflow: hidden;
+    margin-left: 200px;
+    margin-top: -20px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;}
+
+
+    #ad{
+margin: 15px auto 0 550px;
+width: 250px;
+height: 20px;
+background-color: lavender;
+border-color: #999797;
+border-radius: 6px;
+text-align-last: center;
+font-size: 15px;
+text-decoration-color: #999696;
+}
+
+#puan{
+  margin: 15px auto 0 610px;
+  width: 130px;
+height: 20px;
+background-color: lavender;
+border-color: #999797;
+border-radius: 6px;
+text-align-last: center;
+font-size: 15px;
+text-decoration-color: #999696;
+}
+
+#cins1{
+
+margin: 50px 0 0 630px;
+}
+
+
+#dugme{
+  width: 120px;
+    height: 30px;           
+    border: #ddd;
+    background-color: rgb(182, 114, 59);
+    border-radius: 5px;
+    float: left;
+    overflow: hidden;
+    margin: 10px 0px 0px -190px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;}
+    
+
+
+
+
+#dugme:hover{ border-color:#c46e46; background:#81481a}
+
+
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    <title> Case Study</title>
+</head>
+<body>
+    <div id="case">Case Study
+    
+            
+        <div class="newpagebuttonx">
+            <button class="newpagebuttony" id="backListing"> < Listeye Dön </button></div>
+
+    
+      
+      
+              <div class="newpagebutton">
+                <button class="newpagebuttona" > ＋ YENİ KAYIT </button></div>
+      
+                
+      
+        </div> 
+
+
+
+        <div class="form1">
+            <form action="" method="get">
+            
+            
+            <table width="630" border="0" >
+              
+              
+              <tr>
+                <td>
+                  <input name="cins" type="radio" id="cins1" value="" checked="checked"  />
+                  Film <input name="cins" type="radio" id="cins2" value="" /> Dizi </td>
+                  <td>&nbsp;</td>
+                </tr>
+              
+              <tr>
+               
+              <td width="270"><input name="ad" id="ad" value="Film / Dizi Adı"></td>
+              </tr>
+              <tr>
+                <td><input name="" id="puan" value="Puan" ></td>
+              </tr>
+              
+              <tr>
+                <td>&nbsp;</td>
+                <td><input name="" id="dugme" type="button" value="KAYDET" onClick="Save()" /></td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            
+            
+            
+            </form>
+            </div>
+
+
+
+
+
+
+    
+</body>
+
+
+<script type="text/javascript"> 
+MaterialList=[];
+
+ 
+
+ $(document).ready(function() {
+  var st=localStorage.getItem("Materials");
+  MaterialList=JSON.parse(st);
+});
+
+
+document.getElementById("backListing").onclick = function () {
+  location.href = "Listing.html";
+};
+
+
+
+
+function Save(){
+
+  var sMaterialName=document.getElementById("ad").value;
+  var sMaterialPuan=document.getElementById("puan").value;
+  var sMaterialType="";
+
+  if(document.getElementById("cins1").checked)
+  {
+    sMaterialType="Film";
+  }
+  else if (document.getElementById("cins2").checked)
+  {
+    sMaterialType="Dizi"
+  }
+  else{
+    alert("Tip Seçilmedi");
+    return;
+  }
+
+  MaterialList.push({MaterialName:sMaterialName,Puan:sMaterialPuan,Type:sMaterialType});
+ 
+  localStorage.setItem("Materials",JSON.stringify(MaterialList));
+
+  alert("Kaydedildi");
+}
+
+
+</script>
+</html>
