@@ -1,0 +1,96 @@
+#case {
+    color: rgb(19, 18, 18);
+    background-color: #edeeee;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-weight: 600;
+             
+  }
+  .newpagebutton {position: absolute;
+
+
+}
+
+.newpagebuttona{
+width: 120px;
+height: 30px;           
+border: #ddd;
+background-color: rgb(182, 114, 59);
+border-radius: 5px;
+float: left;
+overflow: hidden;
+margin-left: 1050px;
+margin-top: -20px;
+color: rgb(255, 255, 255);
+font-size: 15px;}
+
+
+.newpagebuttonx {position: absolute;
+
+
+ 
+}
+.newpagebuttony{width: 120px;
+height: 30px;           
+border: #ddd;
+background-color: rgb(182, 114, 59);
+border-radius: 5px;
+float: left;
+overflow: hidden;
+margin-left: 200px;
+margin-top: -20px;
+color: rgb(255, 255, 255);
+font-size: 15px;}
+
+
+#ad{
+margin: 15px auto 0 550px;
+width: 250px;
+height: 20px;
+background-color: lavender;
+border-color: #999797;
+border-radius: 6px;
+text-align-last: center;
+font-size: 15px;
+text-decoration-color: #999696;
+}
+
+#puan{
+margin: 15px auto 0 610px;
+width: 130px;
+height: 20px;
+background-color: lavender;
+border-color: #999797;
+border-radius: 6px;
+text-align-last: center;
+font-size: 15px;
+text-decoration-color: #999696;
+}
+
+#cins1{
+
+margin: 50px 0 0 630px;
+}
+
+
+#dugme{
+width: 120px;
+height: 30px;           
+border: #ddd;
+background-color: rgb(182, 114, 59);
+border-radius: 5px;
+float: left;
+overflow: hidden;
+margin: 10px 0px 0px -190px;
+color: rgb(255, 255, 255);
+font-size: 15px;}
+
+
+
+
+
+#dugme:hover{ border-color:#c46e46; background:#81481a}
